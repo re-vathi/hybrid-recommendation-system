@@ -70,14 +70,14 @@ Returns the 5 most similar movies with confidence scores.
 ## Project Files
 src/
 
-├── api/              # FastAPI routes
+├── api/              (FastAPI routes)
 
-├── recommenders/     # 4 different algorithms
+├── recommenders/     (4 different algorithms)
 
-├── database/         # SQL models + persistence
+├── database/         (SQL models + persistence)
 
-├── cache/           # Redis caching
+├── cache/           (Redis caching)
 
-├── optimization/    # FAISS indexing
+├── optimization/    (FAISS indexing)
 
-└── utils/          # Logging, helpers
+└── utils/          (Logging, helpers)
