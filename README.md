@@ -1,22 +1,16 @@
-# Hybrid Recommendation System - Phase 1
 # Hybrid Movie Recommendation System
 
-A production recommendation system I built to explore how different ML algorithms can work together. It combines content-based filtering, collaborative filtering, popularity analysis, and graph-based approaches into a single hybrid model.
+A production recommendation system I built to explore how different ML algorithms can work together. It combines content based filtering, collaborative filtering, cosine similarity, popularity analysis and graph based approaches into a single hybrid model.
 
-## Why I Built This
 
-I wanted to understand how real recommendation systems work at scale. Most projects use just one algorithm, but production systems need multiple signals. This project was about learning:
-- How to blend different ML approaches effectively
-- Building APIs that actually perform well (caching, indexing)
-- Designing systems that scale
 
 ## What It Does
 
 Given a movie, it recommends similar ones by analyzing:
-- **Content**: Movie genres using TF-IDF
+- **Content**: Movie genres using TF IDF
 - **Collaborative**: What similar users rated highly
 - **Popularity**: How often movies are rated (quality signal)
-- **Graph**: Movies watched by same users (co-ratings)
+- **Graph**: Movies watched by same users (co ratings)
 
 Each signal gets a normalized score (0-1), then they're blended with weights: 35% content, 30% collaborative, 20% popularity, 15% graph.
 
@@ -74,3 +68,16 @@ Returns the 5 most similar movies with confidence scores.
 - Experiment with neural collaborative filtering
 
 ## Project Files
+src/
+
+├── api/              # FastAPI routes
+
+├── recommenders/     # 4 different algorithms
+
+├── database/         # SQL models + persistence
+
+├── cache/           # Redis caching
+
+├── optimization/    # FAISS indexing
+
+└── utils/          # Logging, helpers
